@@ -69,12 +69,11 @@ window.addEventListener('load', () => {
         task_complete_el.addEventListener('click', (e) => {
             if (task_complete_el.innerText.toLowerCase() == "complete") {
                 task_complete_el.innerText = "Completed";
-            }
-            else {
-                task_complete_el.innerText = "Completed";
-
+                task_edit_el.innerText = "";
+                task_delete_el.innerText = "";
 
             }
+
 
         });
 
