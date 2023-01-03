@@ -35,8 +35,15 @@ window.addEventListener('load', () => {
         task_delete_el.classList.add('delete');
         task_delete_el.innerText = 'Delete';
 
+        const task_complete_el = document.createElement('button');
+        task_complete_el.classList.add('complete');
+        task_complete_el.innerText = 'Complete';
+
         task_actions_el.appendChild(task_edit_el);
         task_actions_el.appendChild(task_delete_el);
+        task_actions_el.appendChild(task_complete_el);
+
+
 
         task_el.appendChild(task_actions_el);
 
@@ -58,5 +65,19 @@ window.addEventListener('load', () => {
         task_delete_el.addEventListener('click', (e) => {
             list_el.removeChild(task_el);
         });
+
+        task_complete_el.addEventListener('click', (e) => {
+            if (task_complete_el.innerText.toLowerCase() == "complete") {
+                task_complete_el.innerText = "Completed";
+            }
+            else {
+                task_complete_el.innerText = "Completed";
+
+
+            }
+
+        });
+
+
     });
 });
